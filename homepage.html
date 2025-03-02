@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world with Code Artistic. Discover hill stations and more!">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: #333;
+        }
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://wallpapercave.com/wp/wp7287118.jpg');
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        nav {
+            width: 100%;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            padding: 0 20px;
+        }
+        .profile-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        .logout-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #00b894; /* Updated button color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .logout-btn:hover {
+            background-color: #00977a; /* Darker shade for hover effect */
+        }
+
+        /* About T&S complexity section (overlayed content) */
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 400px;
+        }
+        .content-title {
+            font-size: 24px;
+            margin-bottom: 10px; /* Reduced margin for spacing */
+            letter-spacing: 1px;
+            text-transform: uppercase; /* Make title uppercase */
+        }
+        .content-description {
+            font-size: 16px; /* Adjusted font size for description */
+            margin-bottom: 20px; /* Space between description and button */
+        }
+        .explore-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #00b894; /* Same button color */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .explore-btn:hover {
+            background-color: #00977a; /* Darker shade for hover effect */
+        }
+        
+        @media (max-width: 768px) {
+            .content-title {
+                font-size: 20px;
+            }
+            .content-description {
+                font-size: 14px; /* Adjusted font size for mobile */
+            }
+            .explore-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Profile Icon on the Upper Left -->
+            <div class="profile-icon"></div>
+
+            <!-- Logout Button on the Upper Right -->
+            <button class="logout-btn">Logout</button>
+        </nav>
+        
+        <!-- Overlay Content for About T&S Complexity -->
+        <div class="content-box">
+            <div class="content-title">TIME AND SPACE COMPLEXITY</div> <!-- Updated title -->
+            <div class="content-description">
+                The valid algorithm takes a finite amount of time for execution. The time required by the algorithm to solve a given problem is called time complexity of the algorithm whereas space complexity is a metric that measures the amount of memory an algorithm or data structure needs to solve a problem.
+            </div> <!-- Added description -->
+            <a href="#" class="explore-btn">Explore →</a>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(https://wallpapers.com/images/high/4k-anime-space-ah66k41dv54b8hr6.webp) no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .wrapper {
+            width: 420px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 12px;
+            padding: 30px 40px;
+            backdrop-filter: blur(9px);
+            display: none; /* Hide by default */
+        }
+        .wrapper.active {
+            display: block; /* Show when active */
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 20px 0;
+        }
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 20px 45px 20px 20px;
+        }
+        .input-box input::placeholder {
+            color: #fff;
+        }
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 30%;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: #fff;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .toggle-btn {
+            width: 100%;
+            height: 45px;
+            background: #32c32c;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14.5px;
+            margin-top: 10px;
+        }
+        .footer a {
+            color: #32c32c;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleForms() {
+            const signInWrapper = document.getElementById('sign-in');
+            const signUpWrapper = document.getElementById('sign-up');
+            signInWrapper.classList.toggle('active');
+            signUpWrapper.classList.toggle('active');
+        }
+
+        function handleSignIn(event) {
+            event.preventDefault();
+            // Add sign-in logic here
+            alert('Sign In submitted!');
+        }
+
+        function handleSignUp(event) {
+            event.preventDefault();
+            // Add sign-up logic here
+            alert('Sign Up submitted!');
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper active" id="sign-in">
+        <form onsubmit="handleSignIn(event)">
+            <h1>Sign In</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Enter your username" required aria-label="Username">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Enter your password" required aria-label="Password">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+            <div class="footer">
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForms()">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="wrapper" id="sign-up">
+        <form onsubmit="handleSignUp(event)">
+            <h1>Sign Up</h1>
+            <p><b>It's free and only takes a minute</b></p>
+            <div class="input-box">
+                <input type="text" placeholder="Enter your first name" required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Enter your last name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            <div class="footer">
+                <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForms()">Login here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
